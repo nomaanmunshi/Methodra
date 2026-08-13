@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Methodra</string>
+    <string name="accessibility_service_description">Optional focus protection. Methodra observes only the foreground app package name while protection is enabled, and can redirect you away from apps you selected. You can disable this service at any time.</string>
+</resources>

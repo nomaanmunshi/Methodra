@@ -1,0 +1,645 @@
+[
+  {
+    "id": "if_then_start",
+    "name": "If–Then Start Protocol",
+    "shortExplanation": "Connect one recognizable cue to one concrete first action.",
+    "intendedProblem": "Delayed initiation, forgetting, or distraction at a predictable moment.",
+    "mayHelpWhen": [
+      "The same situation repeatedly precedes avoidance.",
+      "The first action can be made concrete and small."
+    ],
+    "unsuitableWhen": [
+      "The obstacle is lack of skill or resources rather than initiation."
+    ],
+    "evidence": {
+      "level": "A",
+      "limitation": "Effects vary by goal, population, and the quality of the plan. A cue-action plan does not remove structural barriers.",
+      "rationale": "Implementation-intention research supports specific if–then plans for goal pursuit."
+    },
+    "inspiration": "Implementation intentions — Gollwitzer & Sheeran",
+    "setupQuestions": [
+      "What situation reliably occurs before the action?",
+      "What is the smallest observable first action?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Name the cue",
+        "instruction": "Choose a situation that is likely to occur and easy to recognize."
+      },
+      {
+        "order": 2,
+        "title": "Name the first action",
+        "instruction": "Define one action that can begin in under two minutes."
+      },
+      {
+        "order": 3,
+        "title": "Write the link",
+        "instruction": "Use the form: When X occurs, I will do Y."
+      }
+    ],
+    "minimumVersion": "Perform only the first observable action.",
+    "focusRule": "Optionally protect the first 20–45 minutes from selected distracting apps.",
+    "outcomeMetric": "Planned starts completed",
+    "reviewDays": 14,
+    "stopConditions": [
+      "The cue rarely occurs.",
+      "The action is repeatedly impossible in that context."
+    ],
+    "sourceLabels": [
+      "Gollwitzer & Sheeran — implementation intentions"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "DIGITAL_WELLBEING",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "DELAYED_START",
+      "FORGETTING",
+      "DIGITAL_DISTRACTION"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.1016/S0065-2601(06)38002-1"
+    ]
+  },
+  {
+    "id": "obstacle_plan",
+    "name": "Obstacle Plan",
+    "shortExplanation": "Contrast the desired outcome with the most likely internal obstacle, then prepare a response.",
+    "intendedProblem": "Repeated failure caused by a predictable internal obstacle.",
+    "mayHelpWhen": [
+      "The user can name a likely obstacle rather than only a vague lack of motivation."
+    ],
+    "unsuitableWhen": [
+      "The problem is primarily external and cannot be changed by a personal response plan."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Average effects are modest and context-dependent; publication bias has been discussed in the literature.",
+      "rationale": "Mental contrasting with implementation intentions has controlled and meta-analytic support."
+    },
+    "inspiration": "Mental contrasting with implementation intentions / WOOP research",
+    "setupQuestions": [
+      "What outcome matters?",
+      "What internal obstacle is most likely?",
+      "What response is realistic when it appears?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Outcome",
+        "instruction": "Describe the observable result you want."
+      },
+      {
+        "order": 2,
+        "title": "Obstacle",
+        "instruction": "Name the most likely internal barrier."
+      },
+      {
+        "order": 3,
+        "title": "Response",
+        "instruction": "Write an if–then response to that barrier."
+      }
+    ],
+    "minimumVersion": "Name one obstacle and one response.",
+    "focusRule": null,
+    "outcomeMetric": "Obstacle-response attempts",
+    "reviewDays": 14,
+    "stopConditions": [
+      "The identified obstacle is consistently wrong."
+    ],
+    "sourceLabels": [
+      "Wang, Wang & Gai — MCII meta-analysis"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "OVERWHELM",
+      "INCONSISTENCY",
+      "DELAYED_START",
+      "RECOVERY"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.3389/fpsyg.2021.565202"
+    ]
+  },
+  {
+    "id": "context_anchor",
+    "name": "Context Anchor",
+    "shortExplanation": "Repeat a small behavior in a stable context and observe whether it becomes easier to initiate.",
+    "intendedProblem": "Inconsistent repetition caused by changing cues and schedules.",
+    "mayHelpWhen": [
+      "A stable place, preceding action, or time window exists."
+    ],
+    "unsuitableWhen": [
+      "The user has no recurring context or the behavior must vary constantly."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Habit-formation time varies widely; there is no universal 21- or 66-day rule.",
+      "rationale": "Stable contextual repetition is associated with growing automaticity."
+    },
+    "inspiration": "Habit automaticity research — Lally et al.",
+    "setupQuestions": [
+      "Which context is genuinely stable?",
+      "What version of the behavior is repeatable there?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Choose context",
+        "instruction": "Select a recurring cue such as after breakfast or arriving at the library."
+      },
+      {
+        "order": 2,
+        "title": "Repeat one behavior",
+        "instruction": "Keep the first action consistent in that context."
+      },
+      {
+        "order": 3,
+        "title": "Rate automaticity",
+        "instruction": "Notice whether starting requires less conscious effort over time."
+      }
+    ],
+    "minimumVersion": "Do the first 60 seconds in the chosen context.",
+    "focusRule": null,
+    "outcomeMetric": "Context-linked repetitions",
+    "reviewDays": 28,
+    "stopConditions": [
+      "The context is not stable enough to be useful."
+    ],
+    "sourceLabels": [
+      "Lally et al. — habit automaticity"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "INCONSISTENCY",
+      "FORGETTING"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.1002/ejsp.674"
+    ]
+  },
+  {
+    "id": "progress_mirror",
+    "name": "Progress Mirror",
+    "shortExplanation": "Collect the smallest useful evidence of progress and review the trend instead of protecting a meaningless streak.",
+    "intendedProblem": "Poor feedback about whether effort is producing useful progress.",
+    "mayHelpWhen": [
+      "A meaningful output or behavior can be counted or rated."
+    ],
+    "unsuitableWhen": [
+      "The metric would encourage harmful or obsessive tracking."
+    ],
+    "evidence": {
+      "level": "A",
+      "limitation": "Monitoring helps most when the metric is relevant and feedback is actually reviewed.",
+      "rationale": "Goal-progress monitoring has meta-analytic support."
+    },
+    "inspiration": "Goal-progress monitoring research",
+    "setupQuestions": [
+      "What is the smallest meaningful evidence?",
+      "How often is a review useful?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Choose evidence",
+        "instruction": "Pick one metric tied to the desired outcome."
+      },
+      {
+        "order": 2,
+        "title": "Log honestly",
+        "instruction": "Record the result without filling gaps to preserve a streak."
+      },
+      {
+        "order": 3,
+        "title": "Review the trend",
+        "instruction": "Use the review to continue, simplify, modify, or stop."
+      }
+    ],
+    "minimumVersion": "Record one honest metric value.",
+    "focusRule": null,
+    "outcomeMetric": "Chosen progress metric",
+    "reviewDays": 7,
+    "stopConditions": [
+      "The metric is not related to the outcome.",
+      "Tracking creates more burden than information."
+    ],
+    "sourceLabels": [
+      "Harkin et al. — monitoring goal progress"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "INCONSISTENCY",
+      "RECOVERY"
+    ],
+    "sourceUrls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26479070/"
+    ]
+  },
+  {
+    "id": "temptation_pairing",
+    "name": "Temptation Pairing",
+    "shortExplanation": "Pair an immediately enjoyable activity with a valuable delayed-reward behavior when the two are compatible.",
+    "intendedProblem": "A useful behavior consistently loses to a more immediately rewarding option.",
+    "mayHelpWhen": [
+      "The enjoyable activity does not interfere with performance or safety."
+    ],
+    "unsuitableWhen": [
+      "The pairing reduces learning, attention, exercise safety, or task quality."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Evidence is domain-specific and should not be generalized to every behavior.",
+      "rationale": "Temptation bundling has field-experimental support, particularly in exercise settings."
+    },
+    "inspiration": "Temptation bundling research — Milkman, Minson & Volpp",
+    "setupQuestions": [
+      "What enjoyable activity is genuinely tempting?",
+      "Can it coexist with the target behavior without degrading it?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Choose the valuable action",
+        "instruction": "Name the delayed-reward behavior."
+      },
+      {
+        "order": 2,
+        "title": "Choose the temptation",
+        "instruction": "Pick an enjoyable activity reserved for compatible use."
+      },
+      {
+        "order": 3,
+        "title": "Test compatibility",
+        "instruction": "Stop the pairing if output or safety declines."
+      }
+    ],
+    "minimumVersion": "Use the pairing for the first ten minutes.",
+    "focusRule": null,
+    "outcomeMetric": "Target sessions started",
+    "reviewDays": 14,
+    "stopConditions": [
+      "The pairing distracts from the target behavior."
+    ],
+    "sourceLabels": [
+      "Milkman, Minson & Volpp — temptation bundling"
+    ],
+    "goalDomains": [
+      "HEALTHY_ROUTINE",
+      "GENERAL",
+      "PERSONAL_PROJECT"
+    ],
+    "obstacles": [
+      "TEMPTATION",
+      "DELAYED_START"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.1287/mnsc.2013.1784"
+    ]
+  },
+  {
+    "id": "fresh_start_recovery",
+    "name": "Fresh Start & Recovery",
+    "shortExplanation": "Use a meaningful boundary to begin, then treat misses as diagnostic information rather than moral failure.",
+    "intendedProblem": "Difficulty restarting after disruption or a missed day.",
+    "mayHelpWhen": [
+      "A transition or chosen boundary can support a clear restart."
+    ],
+    "unsuitableWhen": [
+      "Waiting for a landmark would unnecessarily delay urgent action."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Temporal landmarks can increase initiation, but effects are not guaranteed and do not replace practical planning.",
+      "rationale": "Research on temporal landmarks supports a fresh-start effect in some contexts."
+    },
+    "inspiration": "Fresh-start effect — Dai, Milkman & Riis",
+    "setupQuestions": [
+      "What boundary is meaningful but not unnecessarily far away?",
+      "What actually caused the previous miss?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Choose the restart",
+        "instruction": "Use today, Monday, return from travel, or another meaningful boundary."
+      },
+      {
+        "order": 2,
+        "title": "Diagnose the miss",
+        "instruction": "Classify the failure: ability, opportunity, motivation, task size, timing, or unrealistic rule."
+      },
+      {
+        "order": 3,
+        "title": "Change one thing",
+        "instruction": "Modify the protocol based on the diagnosis."
+      }
+    ],
+    "minimumVersion": "Restart with the smallest version today.",
+    "focusRule": null,
+    "outcomeMetric": "Successful restarts after misses",
+    "reviewDays": 14,
+    "stopConditions": [
+      "The landmark is being used to procrastinate."
+    ],
+    "sourceLabels": [
+      "Dai, Milkman & Riis — fresh-start effect"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "RECOVERY",
+      "INCONSISTENCY",
+      "OVERWHELM"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.1287/mnsc.2014.1901"
+    ]
+  },
+  {
+    "id": "attention_residue_guard",
+    "name": "Attention Residue Guard",
+    "shortExplanation": "Close one task cleanly before a protected focus block, capture stray thoughts, and leave a restart note.",
+    "intendedProblem": "Task switching and digital interruptions during cognitively demanding work.",
+    "mayHelpWhen": [
+      "The work benefits from sustained attention.",
+      "Unfinished prior tasks keep intruding."
+    ],
+    "unsuitableWhen": [
+      "The role requires continuous urgent responsiveness."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "The complete protocol is an engineered application; evidence more directly supports the underlying attention-residue and interruption findings.",
+      "rationale": "Task-switching research indicates attention can remain on unfinished prior work."
+    },
+    "inspiration": "Attention-residue research — Leroy; Deep Work inspired implementation",
+    "setupQuestions": [
+      "What unfinished thought needs capturing?",
+      "Which interruptions are realistically suppressible?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Clear residue",
+        "instruction": "Write unfinished thoughts from the prior task."
+      },
+      {
+        "order": 2,
+        "title": "Protect the block",
+        "instruction": "Select distracting apps to restrict for the planned duration."
+      },
+      {
+        "order": 3,
+        "title": "Leave a restart note",
+        "instruction": "End with one sentence describing the next action."
+      }
+    ],
+    "minimumVersion": "Capture one unfinished thought and focus for 15 minutes.",
+    "focusRule": "Block selected distracting apps during the protected block.",
+    "outcomeMetric": "Focused minutes plus produced artifact",
+    "reviewDays": 7,
+    "stopConditions": [
+      "Protection prevents essential communication."
+    ],
+    "sourceLabels": [
+      "Leroy — attention residue",
+      "Cal Newport — Deep Work inspiration"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "PERSONAL_PROJECT"
+    ],
+    "obstacles": [
+      "TASK_SWITCHING",
+      "DIGITAL_DISTRACTION",
+      "DELAYED_START"
+    ],
+    "sourceUrls": [
+      "https://doi.org/10.1016/j.obhdp.2009.04.002",
+      ""
+    ]
+  },
+  {
+    "id": "autonomy_check",
+    "name": "Autonomy Check",
+    "shortExplanation": "Check whether a goal is personally chosen, appropriately challenging, and supported by useful relationships.",
+    "intendedProblem": "Persistence problems where the goal feels imposed, punishing, or disconnected from personal reasons.",
+    "mayHelpWhen": [
+      "The user is unsure why they are pursuing the goal."
+    ],
+    "unsuitableWhen": [
+      "The immediate issue is a simple scheduling or knowledge gap."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Self-determination theory is broad; specific Methodra interface prompts are conservative applications, not independently validated treatments.",
+      "rationale": "Self-determination research emphasizes autonomy, competence, and relatedness."
+    },
+    "inspiration": "Self-Determination Theory",
+    "setupQuestions": [
+      "Would I choose this goal without external pressure?",
+      "Is the difficulty challenging but learnable?",
+      "Who can provide useful support?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Check choice",
+        "instruction": "Write the personal reason, or acknowledge that the goal is externally constrained."
+      },
+      {
+        "order": 2,
+        "title": "Check competence",
+        "instruction": "Reduce difficulty if the next action is currently impossible."
+      },
+      {
+        "order": 3,
+        "title": "Check support",
+        "instruction": "Name one useful source of feedback or help."
+      }
+    ],
+    "minimumVersion": "Write one personally meaningful reason or decide to reconsider the goal.",
+    "focusRule": null,
+    "outcomeMetric": "Goal-quality review",
+    "reviewDays": 14,
+    "stopConditions": [
+      "The goal is persistently unwanted and optional."
+    ],
+    "sourceLabels": [
+      "Self-Determination Theory research portal"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "HEALTHY_ROUTINE",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "LOW_AUTONOMY",
+      "OVERWHELM"
+    ],
+    "sourceUrls": [
+      "https://selfdeterminationtheory.org/theory/"
+    ]
+  },
+  {
+    "id": "recall_protocol",
+    "name": "Recall Protocol",
+    "shortExplanation": "Replace passive review with retrieval attempts, delayed revisits, and corrective feedback.",
+    "intendedProblem": "Study time that feels productive but produces weak recall.",
+    "mayHelpWhen": [
+      "The goal involves learning retrievable knowledge or procedures."
+    ],
+    "unsuitableWhen": [
+      "The task is primarily exploratory reading with no current retrieval goal."
+    ],
+    "evidence": {
+      "level": "A",
+      "limitation": "Retrieval practice is powerful for learning, but prompt quality, feedback, spacing, and material type still matter.",
+      "rationale": "Retrieval-practice and distributed-learning research has substantial experimental support."
+    },
+    "inspiration": "Retrieval practice research; Make It Stick as an accessible synthesis",
+    "setupQuestions": [
+      "What should be retrievable without notes?",
+      "When will the next retrieval attempt occur?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Close the source",
+        "instruction": "Attempt one question or explanation from memory."
+      },
+      {
+        "order": 2,
+        "title": "Check feedback",
+        "instruction": "Compare the attempt with a reliable source and correct errors."
+      },
+      {
+        "order": 3,
+        "title": "Schedule another retrieval",
+        "instruction": "Revisit after a delay instead of immediately rereading."
+      }
+    ],
+    "minimumVersion": "Answer one question from memory before looking.",
+    "focusRule": "Optionally protect the retrieval block from distracting apps.",
+    "outcomeMetric": "Completed retrieval attempts",
+    "reviewDays": 14,
+    "stopConditions": [
+      "Questions do not match the material being learned."
+    ],
+    "sourceLabels": [
+      "Roediger & Karpicke — retrieval practice",
+      "Brown, Roediger & McDaniel — Make It Stick inspiration"
+    ],
+    "goalDomains": [
+      "STUDY"
+    ],
+    "obstacles": [
+      "PASSIVE_STUDY",
+      "INCONSISTENCY",
+      "DIGITAL_DISTRACTION"
+    ],
+    "sourceUrls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+      ""
+    ]
+  },
+  {
+    "id": "voluntary_commitment",
+    "name": "Voluntary Commitment",
+    "shortExplanation": "Preselect a reversible restriction that protects a decision you already want to make.",
+    "intendedProblem": "Predictable temptation during a planned work period.",
+    "mayHelpWhen": [
+      "The user explicitly wants extra friction against a known distraction."
+    ],
+    "unsuitableWhen": [
+      "Restriction could interfere with safety, caregiving, accessibility, or essential communication."
+    ],
+    "evidence": {
+      "level": "B",
+      "limitation": "Commitment-device evidence varies by domain. Methodra uses no financial punishment and never claims restrictions are impossible to bypass.",
+      "rationale": "Commitment devices have controlled evidence in several behavioral domains."
+    },
+    "inspiration": "Commitment-device research — Rogers, Milkman & Volpp",
+    "setupQuestions": [
+      "Which apps are genuinely distracting?",
+      "What emergency path must remain available?"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Choose restrictions",
+        "instruction": "Select only apps you want Methodra to add friction to."
+      },
+      {
+        "order": 2,
+        "title": "Set the window",
+        "instruction": "Choose a clear start, duration, and optional daily budget."
+      },
+      {
+        "order": 3,
+        "title": "Keep an exit",
+        "instruction": "Emergency exit remains available with a short reason for later review."
+      }
+    ],
+    "minimumVersion": "Protect one 15-minute block.",
+    "focusRule": "Use Methodra focus protection with a deliberate emergency exit.",
+    "outcomeMetric": "Protected sessions completed",
+    "reviewDays": 7,
+    "stopConditions": [
+      "The restriction blocks something essential.",
+      "The permission burden exceeds the benefit."
+    ],
+    "sourceLabels": [
+      "Rogers, Milkman & Volpp — commitment devices",
+      "Android UsageStatsManager documentation"
+    ],
+    "goalDomains": [
+      "STUDY",
+      "WORK",
+      "DIGITAL_WELLBEING",
+      "PERSONAL_PROJECT",
+      "GENERAL"
+    ],
+    "obstacles": [
+      "DIGITAL_DISTRACTION",
+      "TEMPTATION",
+      "TASK_SWITCHING"
+    ],
+    "sourceUrls": [
+      "https://pubmed.ncbi.nlm.nih.gov/24777472/",
+      "https://developer.android.com/reference/android/app/usage/UsageStatsManager"
+    ]
+  }
+]

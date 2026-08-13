@@ -1,0 +1,65 @@
+[
+  {
+    "id": "deep_work",
+    "title": "Depth Block",
+    "book": "Deep Work",
+    "author": "Cal Newport",
+    "evidenceLevel": "C",
+    "summary": "A focused-work protocol inspired by Deep Work, expressed in original Methodra language. The full book framework is not presented as experimentally proven.",
+    "steps": [
+      "Define one cognitively demanding outcome.",
+      "Choose a start and stop time.",
+      "Remove likely digital interruptions.",
+      "Capture unrelated thoughts without switching tasks.",
+      "Record focused minutes and the produced artifact.",
+      "End with a restart note or shutdown ritual."
+    ],
+    "evidenceNote": "Level C for the complete collection. Attention-residue and interruption components can be linked separately to relevant research."
+  },
+  {
+    "id": "psycho_cybernetics",
+    "title": "Self-Image Rehearsal",
+    "book": "Psycho-Cybernetics",
+    "author": "Maxwell Maltz",
+    "evidenceLevel": "C",
+    "summary": "A reflection that converts identity language into one observable action in an upcoming difficult situation.",
+    "steps": [
+      "Describe the person you want to become in behavioral terms.",
+      "Mentally rehearse one upcoming difficult situation.",
+      "Specify the observable action that identity would take.",
+      "Compare rehearsal with what actually happened during review."
+    ],
+    "evidenceNote": "Level C/D reflection. Methodra does not claim visualization reprograms the brain or guarantees outcomes."
+  },
+  {
+    "id": "pragmatic_programmer",
+    "title": "Knowledge Portfolio",
+    "book": "The Pragmatic Programmer",
+    "author": "David Thomas & Andrew Hunt",
+    "evidenceLevel": "C",
+    "summary": "A developer protocol for turning technical reading into a small working artifact and maintained skill investment.",
+    "steps": [
+      "Choose one skill investment.",
+      "Define a small working artifact.",
+      "Use a tracer-bullet implementation to test direction.",
+      "Record what was learned.",
+      "Schedule deliberate maintenance or extension."
+    ],
+    "evidenceNote": "Level C practical framework. The protocol is an original Methodra implementation inspired by the book."
+  },
+  {
+    "id": "make_it_stick",
+    "title": "Learn by Retrieval",
+    "book": "Make It Stick",
+    "author": "Peter C. Brown, Henry L. Roediger III & Mark A. McDaniel",
+    "evidenceLevel": "C",
+    "summary": "An accessible study collection combining retrieval, spacing, varied practice, and corrective feedback.",
+    "steps": [
+      "Attempt retrieval before rereading.",
+      "Check and correct the attempt.",
+      "Space the next retrieval rather than repeating immediately.",
+      "Vary problem forms when the material supports it."
+    ],
+    "evidenceNote": "The book collection is Level C as a synthesis; specific retrieval and spacing claims should cite primary learning research separately."
+  }
+]

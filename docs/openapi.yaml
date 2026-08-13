@@ -1,0 +1,217 @@
+openapi: 3.1.0
+info:
+  title: Methodra API
+  version: 1.0.0-demo
+  description: Optional Methodra catalog, authentication and conflict-safe sync backend.
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/v1/methods:
+    get:
+      summary: List research-supported methods
+      responses:
+        '200':
+          description: Ten V1 methods
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MethodDefinition'
+  /api/v1/book-collections:
+    get:
+      summary: List four V1 book-inspired collections
+      responses:
+        '200':
+          description: Book-inspired collections
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BookProtocolCollection'
+  /api/v1/method-matches:
+    post:
+      summary: Return at most three deterministic method matches
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MatchRequest'
+      responses:
+        '200':
+          description: Ranked matches with transparent reasons
+          content:
+            application/json:
+              schema:
+                type: array
+                maxItems: 3
+                items:
+                  $ref: '#/components/schemas/MethodMatch'
+        '400':
+          description: Validation error
+  /api/v1/auth/register:
+    post:
+      summary: Create an optional Methodra account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credentials'
+      responses:
+        '201':
+          description: Account and bearer token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResult'
+  /api/v1/auth/login:
+    post:
+      summary: Log in
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credentials'
+      responses:
+        '200':
+          description: Bearer token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResult'
+  /api/v1/sync/state:
+    get:
+      summary: Read optional versioned sync document
+      security: [{bearerAuth: []}]
+      responses:
+        '200':
+          description: Current sync document
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SyncState'
+        '401': {description: Authentication required}
+    put:
+      summary: Replace sync document if base version is current
+      security: [{bearerAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SyncRequest'
+      responses:
+        '200':
+          description: Updated sync state
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SyncState'
+        '409': {description: Stale base version}
+  /actuator/health:
+    get:
+      summary: Service health
+      responses:
+        '200': {description: Healthy}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: opaque
+  schemas:
+    Credentials:
+      type: object
+      required: [email, password]
+      properties:
+        email: {type: string, format: email, maxLength: 320}
+        password: {type: string, minLength: 10, maxLength: 128}
+    AuthResult:
+      type: object
+      properties:
+        userId: {type: string, format: uuid}
+        email: {type: string, format: email}
+        token: {type: string}
+        expiresAt: {type: string, format: date-time}
+    MatchRequest:
+      type: object
+      required: [goalDomain, desiredOutcome, obstacle, availableMinutes, highScreenTime, structureLevel]
+      properties:
+        goalDomain:
+          type: string
+          enum: [STUDY, WORK, HEALTHY_ROUTINE, DIGITAL_WELLBEING, PERSONAL_PROJECT, GENERAL]
+        desiredOutcome: {type: string, minLength: 1}
+        obstacle:
+          type: string
+          enum: [DELAYED_START, DIGITAL_DISTRACTION, FORGETTING, INCONSISTENCY, OVERWHELM, PASSIVE_STUDY, TASK_SWITCHING, LOW_AUTONOMY, TEMPTATION, RECOVERY]
+        availableMinutes: {type: integer, minimum: 5, maximum: 240}
+        highScreenTime: {type: boolean}
+        structureLevel: {type: string, enum: [LIGHT, MODERATE, HIGH]}
+        pastFailure: {type: string}
+    EvidenceAssessment:
+      type: object
+      properties:
+        level: {type: string, enum: [A, B, C, D]}
+        limitation: {type: string}
+        rationale: {type: string}
+    ProtocolStep:
+      type: object
+      properties:
+        order: {type: integer}
+        title: {type: string}
+        instruction: {type: string}
+    MethodDefinition:
+      type: object
+      properties:
+        id: {type: string}
+        name: {type: string}
+        shortExplanation: {type: string}
+        intendedProblem: {type: string}
+        mayHelpWhen: {type: array, items: {type: string}}
+        unsuitableWhen: {type: array, items: {type: string}}
+        evidence: {$ref: '#/components/schemas/EvidenceAssessment'}
+        inspiration: {type: string}
+        setupQuestions: {type: array, items: {type: string}}
+        steps: {type: array, items: {$ref: '#/components/schemas/ProtocolStep'}}
+        minimumVersion: {type: string}
+        focusRule: {type: [string, 'null']}
+        outcomeMetric: {type: string}
+        reviewDays: {type: integer}
+        stopConditions: {type: array, items: {type: string}}
+        sourceLabels: {type: array, items: {type: string}}
+        sourceUrls: {type: array, items: {type: string}}
+        goalDomains: {type: array, items: {type: string}}
+        obstacles: {type: array, items: {type: string}}
+    MethodMatch:
+      type: object
+      properties:
+        method: {$ref: '#/components/schemas/MethodDefinition'}
+        score: {type: integer}
+        reasons: {type: array, items: {type: string}}
+    BookProtocolCollection:
+      type: object
+      properties:
+        id: {type: string}
+        title: {type: string}
+        book: {type: string}
+        author: {type: string}
+        evidenceLevel: {type: string, enum: [A, B, C, D]}
+        summary: {type: string}
+        steps: {type: array, items: {type: string}}
+        evidenceNote: {type: string}
+    SyncRequest:
+      type: object
+      required: [baseVersion, payload]
+      properties:
+        baseVersion: {type: integer, minimum: 0}
+        payload: {type: string, minLength: 1, maxLength: 1000000}
+    SyncState:
+      type: object
+      properties:
+        version: {type: integer}
+        payload: {type: string}
+        updatedAt: {type: [string, 'null'], format: date-time}

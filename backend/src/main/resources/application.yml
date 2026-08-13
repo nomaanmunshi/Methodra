@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: methodra-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/methodra}
+    username: ${DB_USER:methodra}
+    password: ${DB_PASSWORD:methodra}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+server:
+  port: ${PORT:8080}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+methodra:
+  token-days: 30

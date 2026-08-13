@@ -1,0 +1,176 @@
+[
+  {
+    "id": "study-recall",
+    "methodId": "recall_protocol",
+    "field": "goalDomain",
+    "operator": "eq",
+    "values": [
+      "STUDY"
+    ],
+    "score": 45,
+    "reason": "Your goal is study-related, where active retrieval is often more useful than passive time tracking."
+  },
+  {
+    "id": "passive-recall",
+    "methodId": "recall_protocol",
+    "field": "obstacle",
+    "operator": "eq",
+    "values": [
+      "PASSIVE_STUDY"
+    ],
+    "score": 70,
+    "reason": "You identified passive study as the main obstacle."
+  },
+  {
+    "id": "start-ifthen",
+    "methodId": "if_then_start",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "DELAYED_START",
+      "FORGETTING"
+    ],
+    "score": 65,
+    "reason": "Your obstacle is initiation or forgetting at a repeatable moment."
+  },
+  {
+    "id": "screen-ifthen",
+    "methodId": "if_then_start",
+    "field": "highScreenTime",
+    "operator": "eq",
+    "values": [
+      "true"
+    ],
+    "score": 12,
+    "reason": "A concrete first action can reduce the window in which distracting apps take over."
+  },
+  {
+    "id": "screen-attention",
+    "methodId": "attention_residue_guard",
+    "field": "highScreenTime",
+    "operator": "eq",
+    "values": [
+      "true"
+    ],
+    "score": 35,
+    "reason": "You reported meaningful screen distraction, so a protected block is relevant."
+  },
+  {
+    "id": "switch-attention",
+    "methodId": "attention_residue_guard",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "TASK_SWITCHING",
+      "DIGITAL_DISTRACTION"
+    ],
+    "score": 60,
+    "reason": "Your obstacle directly involves switching or digital interruption."
+  },
+  {
+    "id": "screen-commitment",
+    "methodId": "voluntary_commitment",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "DIGITAL_DISTRACTION",
+      "TEMPTATION"
+    ],
+    "score": 52,
+    "reason": "You want help with a predictable temptation that can be addressed with voluntary friction."
+  },
+  {
+    "id": "recovery-fresh",
+    "methodId": "fresh_start_recovery",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "RECOVERY",
+      "INCONSISTENCY"
+    ],
+    "score": 60,
+    "reason": "Your main difficulty is recovering or maintaining consistency after disruption."
+  },
+  {
+    "id": "inconsistent-anchor",
+    "methodId": "context_anchor",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "INCONSISTENCY",
+      "FORGETTING"
+    ],
+    "score": 48,
+    "reason": "A stable contextual cue may make repetition easier to initiate."
+  },
+  {
+    "id": "overwhelm-obstacle",
+    "methodId": "obstacle_plan",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "OVERWHELM",
+      "DELAYED_START",
+      "RECOVERY"
+    ],
+    "score": 42,
+    "reason": "A named obstacle and preplanned response fit the barrier you described."
+  },
+  {
+    "id": "low-autonomy",
+    "methodId": "autonomy_check",
+    "field": "obstacle",
+    "operator": "eq",
+    "values": [
+      "LOW_AUTONOMY"
+    ],
+    "score": 75,
+    "reason": "You indicated that the goal may not feel personally chosen."
+  },
+  {
+    "id": "temptation-pair",
+    "methodId": "temptation_pairing",
+    "field": "obstacle",
+    "operator": "eq",
+    "values": [
+      "TEMPTATION"
+    ],
+    "score": 43,
+    "reason": "An immediately enjoyable alternative is winning against the delayed-reward behavior."
+  },
+  {
+    "id": "small-time-ifthen",
+    "methodId": "if_then_start",
+    "field": "availableMinutes",
+    "operator": "lte",
+    "values": [
+      "30"
+    ],
+    "score": 10,
+    "reason": "Your available time is limited, which favors a protocol with a very small first action."
+  },
+  {
+    "id": "high-structure-progress",
+    "methodId": "progress_mirror",
+    "field": "structureLevel",
+    "operator": "in",
+    "values": [
+      "MODERATE",
+      "HIGH"
+    ],
+    "score": 18,
+    "reason": "You prefer enough structure to benefit from a concrete outcome metric and review loop."
+  },
+  {
+    "id": "general-progress",
+    "methodId": "progress_mirror",
+    "field": "obstacle",
+    "operator": "in",
+    "values": [
+      "INCONSISTENCY",
+      "RECOVERY"
+    ],
+    "score": 24,
+    "reason": "Honest progress evidence can show whether the protocol is working without relying on streaks."
+  }
+]

@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: methodra
+      POSTGRES_USER: methodra
+      POSTGRES_PASSWORD: methodra
+    ports:
+      - "5432:5432"
+    volumes:
+      - methodra_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U methodra -d methodra"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  backend:
+    build: ./backend
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/methodra
+      DB_USER: methodra
+      DB_PASSWORD: methodra
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  methodra_postgres:
