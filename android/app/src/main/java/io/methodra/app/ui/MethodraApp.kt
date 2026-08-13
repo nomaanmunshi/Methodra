@@ -47,6 +47,7 @@ fun MethodraApp(viewModel: AppViewModel = hiltViewModel()) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun MainShell() {
     val nav = rememberNavController()
