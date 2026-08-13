@@ -32,7 +32,7 @@ jobs:
         run: gradle -p android :app:testDebugUnitTest :app:assembleDebug
       - name: Stage Android artifact
         run: cp android/app/build/outputs/apk/debug/app-debug.apk "Methodra-demo-${GITHUB_REF_NAME}.apk"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: release-android
           path: Methodra-demo-*.apk
@@ -52,7 +52,7 @@ jobs:
         run: gradle -p backend test bootJar
       - name: Stage backend artifact
         run: cp backend/build/libs/*.jar "Methodra-backend-${GITHUB_REF_NAME}.jar"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: release-backend
           path: Methodra-backend-*.jar
