@@ -34,7 +34,7 @@ jobs:
         run: gradle -p backend test
       - name: Build backend jar
         run: gradle -p backend bootJar
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: methodra-backend
           path: backend/build/libs/*.jar
@@ -55,7 +55,7 @@ jobs:
           gradle-version: '8.13'
       - name: Unit tests, lint, APK and instrumentation-test APK compilation
         run: gradle -p android :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: methodra-demo-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
